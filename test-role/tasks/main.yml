@@ -1,5 +1,9 @@
 ---
 # tasks file for test-role
+- name: install docker-py
+  pip:
+    name: docker-py
+
 - name: get all ip
   debug: 
     var: ansible_all_ipv4_addresses
