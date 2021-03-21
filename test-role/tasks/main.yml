@@ -4,7 +4,8 @@
   pip:
     name: docker-py
     executable: pip3
-    
+    extra_args: --user
+   
 - name: get all ip
   debug: 
     var: ansible_all_ipv4_addresses
