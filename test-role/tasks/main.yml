@@ -3,7 +3,8 @@
 - name: install docker-py
   pip:
     name: docker-py
-
+    executable: pip3
+    
 - name: get all ip
   debug: 
     var: ansible_all_ipv4_addresses
