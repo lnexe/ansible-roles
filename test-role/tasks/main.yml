@@ -1,0 +1,14 @@
+---
+# tasks file for test-role
+- name: get all ip
+  debug: 
+    var: ansible_all_ipv4_addresses
+
+- name: Run automation test
+  docker_container:
+    name: mytesting
+    image: redis
+    interactive: yes
+    command: redis-server --appendonly yes
+    state: started
+    recreate: yes
