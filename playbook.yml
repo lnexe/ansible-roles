@@ -1,4 +1,8 @@
 ---
 - hosts: localhost
+  tasks:
+    - name: install docker py
+      pip:
+        name: docker-py
   roles:
     - test-role
